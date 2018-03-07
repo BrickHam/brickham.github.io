@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>
+			RNG Color Picker
+		</title>
+		<style id="css">
+			body {
+				background-color: #000000;
+			}
+		</style>
+		<script>
+			function color() {
+				var hexadecimal = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+				var randomArray = [Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16), Math.floor(Math.random() * 16)];
+				document.getElementById("css").innerHTML = "body{background-color: #" + hexadecimal[randomArray[0]] + hexadecimal[randomArray[1]] + hexadecimal[randomArray[2]] + hexadecimal[randomArray[3]] + hexadecimal[randomArray[4]] + hexadecimal[randomArray[5]] + "}";
+				document.getElementById("text").innerHTML = hexadecimal[randomArray[0]] + hexadecimal[randomArray[1]] + hexadecimal[randomArray[2]] + hexadecimal[randomArray[3]] + hexadecimal[randomArray[4]] + hexadecimal[randomArray[5]];
+			}
+		</script>
+	</head>
+	<body style="text-align: center;">
+		<button onclick="color()">
+			Generate Color
+		</button>
+		<p>
+			<a href="index.html" title="Go back to BrickHam.github.io" id="text">
+			</a>
+		</p>
+	</body>
+</html>
