@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>
+			Addition
+		</title>
+		<script>
+			function start() {
+				var level = 9;
+				var right = 0;
+				var wrong = 0;
+				var streak = 0;
+				while(true) {
+					var one = Math.floor(Math.random() * level);
+					var two = Math.floor(Math.random() * level);
+					var u = prompt(one + " + " + two + "\nRight: " + right + "\nWrong: " + wrong + "\nStreak: " + streak);
+					if (level <= 1) {
+						level = 1;
+					}
+					if (u == "stop") {
+						break;
+					}
+					else if (u == one + two) {
+						right++;
+						streak++;
+						confirm("Correct" + "\nRight: " + right + "\nWrong: " + wrong + "\nStreak: " + streak);
+						level += 2;
+					}
+					else {
+						wrong++;
+						streak = 0;
+						confirm("It's " + (one + two) + ", not " + u + "\nRight: " + right + "\nWrong: " + wrong + "\nStreak: " + streak);
+						level--;
+					}
+ 				}
+				level = 9;
+				right = 0;
+				wrong = 0;
+				streak = 0;
+			}
+		</script>
+	</head>
+	<body style="text-align: center;">
+		<button onclick="start()">
+			Addition
+		</button>
+	</body>
+</html>
