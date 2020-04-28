@@ -1,1 +1,0 @@
-# Erick-Lakkham.github.io
