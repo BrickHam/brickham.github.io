@@ -1,43 +1,17 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-
-      p {
-        font-family: 'Roboto';
-        text-align: center;
-      }
-    </style>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Bacteria Battle</title>
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/brickham.github.io.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 1066px; height: 600px"></div>
-      <div class="footer">
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Bacteria Battle</div>
-      </div>
-      <br />
-      <br />
-      <p><strong>The game works best in fullscreen</strong></p>
-      <br />
-      <p style="color: #00FFFF">WASD-Move player 1</p>
-      <p>Backspace-Toggle player 2</p>
-      <p style="color: #FF0000">IJKL-Move player 2</p>
-      <br />
-      <p><strong>OBJECTIVE:</strong> Don't let your middle shape collide with the other player.</p>
-      <p>The green and violet bacteria around the player multiply over time.</p>
-      <p>The green bacteria follow the cyan player and the violet bacteria follow the red player.</p>
-      <br />
-    </div>
-  </body>
+<html>
+    <head>
+        <title>Colors</title>
+        <script>
+            var hue = 0;
+            setInterval (main, 100);
+            
+            function main () {
+                document.getElementById ("body").style.backgroundColor = "hsl(" + hue + ", 100%, 50%)";
+                hue += 1;
+                hue %= 360;
+            }
+        </script>
+    </head>
+    <body id="body"></body>
 </html>
